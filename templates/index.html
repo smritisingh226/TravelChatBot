@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smriti Travel Site Chatbot</title>
+    <style>
+        /* Styles for the chat popup */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            z-index: 9;
+            max-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .chat-popup .chat-area {
+            height: 200px;
+            overflow-y: scroll;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .chat-popup .chat-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-top: 1px solid #4CAF50;
+            outline: none;
+        }
+        .chat-popup button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        .chat-popup button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Smriti Travel Site</h1>
+    <p>Feel free to ask any travel-related questions to our chatbot!</p>
+
+    <!-- Chat popup -->
+    <button onclick="toggleChat()" id="chatBtn">Open Chat</button>
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-area" id="chatArea"></div>
+        <input type="text" placeholder="Type a message..." id="userInput" class="chat-input">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- JavaScript for chat functionality -->
+    <script>
+        // Function to toggle chat popup
+        function toggleChat() {
+            var popup = document.getElementById("chatPopup");
+            if (popup.style.display === "none") {
+                popup.style.display = "block";
+            } else {
+                popup.style.display = "none";
+            }
+        }
+
+        // Function to send user message and receive response
+        function sendMessage() {
+            if(document.getElementById("userInput").value == "Book flight"){
+                
+            }
+            var userInput = document.getElementById("userInput").value;
+
+            var chatArea = document.getElementById("chatArea");
+            
+            // Display user message
+            chatArea.innerHTML += "<p>User: " + userInput + "</p>";
+            chatArea.scrollTop = chatArea.scrollHeight;
+            document.getElementById("userInput").value = ""; // Clear input field
+
+            // Send user message to server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/get_response", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText).response;
+                    // Display chatbot response
+                    chatArea.innerHTML += "<p>Chatbot: " + response + "</p>";
+                    chatArea.scrollTop = chatArea.scrollHeight;
+                    
+                    // Handle flight booking conversation if necessary
+                    handleFlightBooking(chatArea, userInput, response);
+                }
+            };
+            xhr.send("user_message=" + userInput);
+        }
+
+        // Function to handle flight booking conversation
+        function handleFlightBooking(chatArea, userInput, response) {
+            if (response.includes("Book flight")) {
+                var state = {
+                    sourceCountry: "",
+                    destinationCountry: "",
+                    fromDate: "",
+                    toDate: ""
+                };
+                continueFlightBookingConversation(chatArea, userInput, state);
+            }
+        }
+
+        // Function to continue flight booking conversation
+        function continueFlightBookingConversation(chatArea, userInput, state) {
+            var { sourceCountry, destinationCountry, fromDate, toDate } = state;
+            var nextStep;
+
+            if (!sourceCountry) nextStep = "Source Country";
+            else if (!destinationCountry) nextStep = "Destination Country";
+            else if (!fromDate) nextStep = "From Date";
+            else if (!toDate) nextStep = "To Date";
+            else nextStep = null;
+
+            switch (nextStep) {
+                case "Source Country":
+                    chatArea.innerHTML += "<p>Chatbot: Source Country?</p>";
+                    waitForUserInput(function(userInput) {
+                        state.sourceCountry = userInput;
+                        continueFlightBookingConversation(chatArea, userInput, state);
+                    });
+                    break;
+                case "Destination Country":
+                    chatArea.innerHTML += "<p>Chatbot: Destination Country?</p>";
+                    waitForUserInput(function(userInput) {
+                        state.destinationCountry = userInput;
+                        continueFlightBookingConversation(chatArea, userInput, state);
+                    });
+                    break;
+                case "From Date":
+                    chatArea.innerHTML += "<p>Chatbot: From Date? (format: dd/mm/yyyy)</p>";
+                    waitForUserInput(function(userInput) {
+                        state.fromDate = userInput;
+                        continueFlightBookingConversation(chatArea, userInput, state);
+                    });
+                    break;
+                case "To Date":
+                    chatArea.innerHTML += "<p>Chatbot: To Date? (format: dd/mm/yyyy)</p>";
+                    waitForUserInput(function(userInput) {
+                        state.toDate = userInput;
+                        // All details collected, send data to server
+                        sendFlightBookingDetailsToServer(state);
+                    });
+                    break;
+            }
+        }
+
+        // Function to wait for user input and execute a callback function when input is received
+        function waitForUserInput(callback) {
+            document.getElementById("userInput").addEventListener("change", function(event) {
+                var userInput = event.target.value;
+                event.target.value = ""; // Clear input field
+                callback(userInput);
+            });
+        }
+
+        // Function to send flight booking details to server
+        function sendFlightBookingDetailsToServer(details) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/book_flight", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(details));
+        }
+    </script>
+</body>
+</html>

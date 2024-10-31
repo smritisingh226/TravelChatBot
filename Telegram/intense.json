@@ -1,0 +1,579 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Hey",
+                "Good morning",
+                "Good afternoon",
+                "Good evening",
+                "Hi there",
+                "Hello there",
+                "Greetings"
+            ],
+            "responses": [
+                "Hello! How can I assist you today?",
+                "Hi there! How can I help you?",
+                "Hey! What can I do for you?",
+                "Good [morning/afternoon/evening]! How can I assist you?"
+            ]
+        },
+        {
+            "tag": "farewell",
+            "patterns": [
+                "Bye",
+                "Goodbye",
+                "See you later",
+                "Talk to you later",
+                "Farewell",
+                "Catch you later"
+            ],
+            "responses": [
+                "Goodbye! Have a great day!",
+                "See you later! Take care!",
+                "Farewell! Contact us anytime you need help."
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "Can you help me?",
+                "I need help",
+                "Assistance needed",
+                "Could use some help here",
+                "Help me out"
+            ],
+            "responses": [
+                "Of course! What do you need help with?",
+                "I'm here to help. What can I do for you?",
+                "How can I assist you today?"
+            ]
+        },
+        {
+            "tag": "thank_you",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "Appreciate it",
+                "Thanks a lot",
+                "Thank you very much"
+            ],
+            "responses": [
+                "You're welcome!",
+                "Anytime! Happy to help.",
+                "No problem at all!"
+            ]
+        },{
+            "tag": "emergency_assistance",
+            "patterns": [
+                "Emergency situation in Country?",
+                "What should I do in an emergency?",
+                "How do I get help in an emergency?",
+                "What's the emergency contact number for Country?",
+                "Emergency services in Country?",
+                "Who should I contact if I'm in trouble in Country?",
+                "In case of an emergency, whom should I call in Country?",
+                "Is there a helpline number for emergencies in Country?",
+                "What are the procedures for emergencies in Country?",
+                "What are the emergency protocols in Country?"
+            ],
+            "responses": [
+                "In case of emergency, please dial the local emergency number.",
+                "If you're in need of immediate assistance, don't hesitate to call emergency services."
+            ]
+        },
+        {
+            "tag": "weather_information",
+            "patterns": [
+                "Weather forecast for [city]",
+                "What's the weather like in [city] next week?",
+                "Weather conditions for [city]",
+                "Forecast for [city]",
+                "Temperature in [city] next week"
+            ],
+            "responses": [
+                "The weather conditions for "
+            ]
+        },
+        {
+            "tag": "get_country_currency",
+            "patterns": [
+                "What currency is used in [country]?",
+                "Currency of [country]",
+                "What is the currency of [country]?",
+                "Which currency do they use in [country]?",
+                "Country currency [country]",
+                "Currency used in [country]"
+            ],
+            "responses": [
+                "The currency used is "
+            ]
+        },{
+            "tag": "Covid/India",
+            "patterns": [
+                "Covid/India"
+            ],
+            "responses": [
+                "India is generally safe to visit, but it's always a good idea to check for any travel advisories before your trip. \nhttps://travel.gc.ca/destinations/india \n\nhttps://www.mohfw.gov.in/"
+            ]
+        },
+        {
+            "tag": "Covid/Usa",
+            "patterns": [
+                "Covid/Usa"
+            ],
+            "responses": [
+                "Visiting the Usa is an exciting experience, but staying updated on travel advisories is essential. \nhttps://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html \nhttps://travel.state.gov/content/travel/en/international-travel.html"
+            ]
+        },
+        {
+            "tag": "Covid/Canada",
+            "patterns": [
+                "Covid/Canada"
+            ],
+            "responses": [
+                "Canada is generally safe to visit, but it's always a good idea to check for any travel advisories before your trip. \nhttps://travel.gc.ca/destinations/canada",
+                "Exploring Canada is an adventure, but make sure to stay informed about travel advisories. \nhttps://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/latest-travel-health-advice.html"
+            ]
+        },
+        {
+            "tag": "Covid/Uk",
+            "patterns": [
+                "Covid/Uk"
+            ],
+            "responses": [
+                "The Uk is generally safe to visit, but it's always a good idea to check for any travel advisories before your trip. \nhttps://www.gov.Uk/foreign-travel-advice",
+                "Planning a trip to the Uk? Stay updated on travel advisories here. \nhttps://www.nhs.Uk/conditions/coronavirus-covid-19/"
+            ]
+        },{
+            "tag": "Covid/France",
+            "patterns": [
+                "Covid/France"
+            ],
+            "responses": [
+                "France is a top destination for travelers. Before heading there, it's wise to check the latest travel advisories and health guidelines. \nhttps://www.diplomatie.gouv.fr/en/coming-to-france/coronavirus-advice-for-foreign-nationals-in-france/ \nhttps://www.gouvernement.fr/en/coronavirus-covid-19"
+            ]
+        },
+        {
+            "tag": "LocalRecommendations/India",
+            "patterns": [
+                "Local recommendations in India",
+                "Things to do in India",
+                "Dining options in India",
+                "Nightlife in India",
+                "Cultural experiences in India"
+            ],
+            "responses": [
+                "Here are some local recommendations for India:\n- Taj Mahal in Agra\n- Jaipur's City Palace\n- Goa's Beaches\n\nFor dining options, you might enjoy:\n- Indian Accent in New Delhi\n- Dum PUkht in Mumbai\n- Karim's in Old Delhi\n\nLooking for nightlife in India? Try:\n- Kitty Su in New Delhi\n- High Spirits in Pune\n- Social in Mumbai\n\nTo immerse yourself in the Indian culture, consider:\n- Attending a Bollywood movie screening\n- Visiting a local spice market\n- Participating in a traditional dance class"
+            ]
+        },
+        {
+            "tag": "LocalRecommendations/Usa",
+            "patterns": [
+                "Local recommendations in Usa",
+                "Things to do in Usa",
+                "Dining options in Usa",
+                "Nightlife in Usa",
+                "Cultural experiences in Usa"
+            ],
+            "responses": [
+                "Here are some local recommendations for the Usa:\n- Statue of Liberty in New York City\n- Grand Canyon in Arizona\n- Disneyland in California\n\nFor dining options, you might enjoy:\n- Eleven Madison Park in New York City\n- Alinea in Chicago\n- French Laundry in California\n\nLooking for nightlife in the Usa? Try:\n- XS Nightclub in Las Vegas\n- LIV in Miami\n- The Viper Room in Los Angeles\n\nTo immerse yourself in the American culture, consider:\n- Visiting a baseball game\n- Exploring a national park\n- Attending a music festival"
+            ]
+        },
+        {
+            "tag": "LocalRecommendations/Canada",
+            "patterns": [
+                "Local recommendations in Canada",
+                "Things to do in Canada",
+                "Dining options in Canada",
+                "Nightlife in Canada",
+                "Cultural experiences in Canada"
+            ],
+            "responses": [
+                "Here are some local recommendations for Canada:\n- Banff National Park in Alberta\n- CN Tower in Toronto\n- Old Quebec in Quebec City\n\nFor dining options, you might enjoy:\n- Toqué! in Montreal\n- Hawksworth Restaurant in Vancouver\n- Joe Beef in Montreal\n\nLooking for nightlife in Canada? Try:\n- The Bovine Sex Club in Toronto\n- Le Cercle in Quebec City\n- The Roxy in Vancouver\n\nTo immerse yourself in the Canadian culture, consider:\n- Trying poutine\n- Watching a hockey game\n- Exploring Indigenous heritage sites"
+            ]
+        },
+        {
+            "tag": "LocalRecommendations/Uk",
+            "patterns": [
+                "Local recommendations in Uk",
+                "Things to do in Uk",
+                "Dining options in Uk",
+                "Nightlife in Uk",
+                "Cultural experiences in Uk"
+            ],
+            "responses": [
+                "Here are some local recommendations for the Uk:\n- Buckingham Palace in London\n- Edinburgh Castle in Scotland\n- Stonehenge in Wiltshire\n\nFor dining options, you might enjoy:\n- The Fat Duck in Bray\n- The Ivy in London\n- Restaurant Gordon Ramsay in London\n\nLooking for nightlife in the Uk? Try:\n- Fabric in London\n- The Caves in Edinburgh\n- The Leadmill in Sheffield\n\nTo immerse yourself in the British culture, consider:\n- Afternoon tea\n- Visiting a traditional pub\n- Attending a Shakespeare play at the Globe Theatre"
+            ]
+        },
+        {
+            "tag": "LocalRecommendations/France",
+            "patterns": [
+                "Local recommendations in France",
+                "Things to do in France",
+                "Dining options in France",
+                "Nightlife in France",
+                "Cultural experiences in France"
+            ],
+            "responses": [
+                "Here are some local recommendations for France:\n- Eiffel Tower in Paris\n- Palace of Versailles in Versailles\n- Mont Saint-Michel in Normandy\n\nFor dining options, you might enjoy:\n- Le Bernardin in Paris\n- Septime in Paris\n- L'Astrance in Paris\n\nLooking for nightlife in France? Try:\n- Le Baron in Paris\n- Showcase in Paris\n- La Belle Époque in Paris\n\nTo immerse yourself in the French culture, consider:\n- Visiting a vineyard in Bordeaux\n- Attending a cooking class\n- Exploring the Louvre Museum"
+            ]
+        },
+        {
+            "tag": "TravelBudget/India",
+            "patterns": [
+                "Travel budgeting in India",
+                "Estimate travel costs for India",
+                "Set spending limits for India",
+                "Track expenses in India",
+                "Monitor travel budget for India"
+            ],
+            "responses": [
+                "Planning your travel budget for India? Here are some estimated costs to consider:\n- Accommodation: $50-100 per night\n- Meals: $10-20 per day\n- Transportation: $5-20 per day\n- Sightseeing: Varies per attraction\n\nYou can use the following tools to track your expenses and stay within your budget:\n- Expense tracking apps like Expensify or Mint\n- Spreadsheets to manually record expenses\n- Setting daily spending limits and reviewing expenses regularly"
+            ]
+        },
+        {
+            "tag": "TravelBudget/Usa",
+            "patterns": [
+                "Travel budgeting in Usa",
+                "Estimate travel costs for Usa",
+                "Set spending limits for Usa",
+                "Track expenses in Usa",
+                "Monitor travel budget for Usa"
+            ],
+            "responses": [
+                "Planning your travel budget for the Usa? Here are some estimated costs to consider:\n- Accommodation: $100-300 per night\n- Meals: $20-50 per day\n- Transportation: $10-50 per day\n- Sightseeing: Varies per attraction\n\nYou can use the following tools to track your expenses and stay within your budget:\n- Expense tracking apps like Expensify or Mint\n- Spreadsheets to manually record expenses\n- Setting daily spending limits and reviewing expenses regularly"
+            ]
+        },
+        {
+            "tag": "TravelBudget/Canada",
+            "patterns": [
+                "Travel budgeting in Canada",
+                "Estimate travel costs for Canada",
+                "Set spending limits for Canada",
+                "Track expenses in Canada",
+                "Monitor travel budget for Canada"
+            ],
+            "responses": [
+                "Planning your travel budget for Canada? Here are some estimated costs to consider:\n- Accommodation: $80-200 per night\n- Meals: $15-40 per day\n- Transportation: $10-30 per day\n- Sightseeing: Varies per attraction\n\nYou can use the following tools to track your expenses and stay within your budget:\n- Expense tracking apps like Expensify or Mint\n- Spreadsheets to manually record expenses\n- Setting daily spending limits and reviewing expenses regularly"
+            ]
+        },
+        {
+            "tag": "TravelBudget/France",
+            "patterns": [
+                "Travel budgeting in France",
+                "Estimate travel costs for France",
+                "Set spending limits for France",
+                "Track expenses in France",
+                "Monitor travel budget for France"
+            ],
+            "responses": [
+                "Planning your travel budget for France? Here are some estimated costs to consider:\n- Accommodation: €50-150 per night\n- Meals: €15-40 per day\n- Transportation: €5-30 per day\n- Sightseeing: Varies per attraction\n\nYou can use the following tools to track your expenses and stay within your budget:\n- Expense tracking apps like Linxo or Bankin'\n- Spreadsheets to manually record expenses\n- Setting daily spending limits and reviewing expenses regularly"
+            ]
+        },
+        {
+            "tag": "TravelBudget/Uk",
+            "patterns": [
+                "Travel budgeting in Uk",
+                "Estimate travel costs for Uk",
+                "Set spending limits for Uk",
+                "Track expenses in Uk",
+                "Monitor travel budget for Uk"
+            ],
+            "responses": [
+                "Planning your travel budget for the Uk? Here are some estimated costs to consider:\n- Accommodation: £50-200 per night\n- Meals: £10-30 per day\n- Transportation: £5-20 per day\n- Sightseeing: Varies per attraction\n\nYou can use the following tools to track your expenses and stay within your budget:\n- Expense tracking apps like Money Dashboard or Yolt\n- Spreadsheets to manually record expenses\n- Setting daily spending limits and reviewing expenses regularly"
+            ]
+        },
+        {
+            "tag": "HotelBooking/India",
+            "patterns": [
+                "Book hotels in India",
+                "Hotel booking in India",
+                "Find accommodation in India"
+            ],
+            "responses": [
+                "Here are some links to book hotels in India:\n- [Booking.com](https://www.booking.com)\n- [MakeMyTrip](https://www.makemytrip.com)\n- [OYO Rooms](https://www.oyorooms.com)"
+            ]
+        },
+        {
+            "tag": "HotelBooking/Usa",
+            "patterns": [
+                "Book hotels in Usa",
+                "Hotel booking in Usa",
+                "Find accommodation in Usa"
+            ],
+            "responses": [
+                "Here are some links to book hotels in the Usa:\n- [Expedia](https://www.expedia.com)\n- [Hotels.com](https://www.hotels.com)\n- [Booking.com](https://www.booking.com)"
+            ]
+        },
+        {
+            "tag": "HotelBooking/Canada",
+            "patterns": [
+                "Book hotels in Canada",
+                "Hotel booking in Canada",
+                "Find accommodation in Canada"
+            ],
+            "responses": [
+                "Here are some links to book hotels in Canada:\n- [Booking.com](https://www.booking.com)\n- [Expedia](https://www.expedia.ca)\n- [Hotels.com](https://www.hotels.com)"
+            ]
+        },
+        {
+            "tag": "HotelBooking/France",
+            "patterns": [
+                "Book hotels in France",
+                "Hotel booking in France",
+                "Find accommodation in France"
+            ],
+            "responses": [
+                "Here are some links to book hotels in France:\n- [Booking.com](https://www.booking.com)\n- [Expedia](https://www.expedia.fr)\n- [Hotels.com](https://fr.hotels.com)"
+            ]
+        },
+        {
+            "tag": "HotelBooking/Uk",
+            "patterns": [
+                "Book hotels in Uk",
+                "Hotel booking in Uk",
+                "Find accommodation in Uk"
+            ],
+            "responses": [
+                "Here are some links to book hotels in the Uk:\n- [Booking.com](https://www.booking.com)\n- [Expedia](https://www.expedia.co.Uk)\n- [Hotels.com](https://www.hotels.com)"
+            ]
+        },
+        {
+            "tag": "CustomerExperiences/Uk",
+            "patterns": [
+                "Customer experiences in Uk",
+                "Travel stories about Uk",
+                "Share experiences in Uk"
+            ],
+            "responses": [
+                "Read customer experiences in the Uk on these platforms:\n- [TripAdvisor](https://www.tripadvisor.com)\n- [Lonely Planet](https://www.lonelyplanet.com)\n- [Travelocity](https://www.travelocity.com) \nTestimonials:\n1. \"The view from the London Eye is breathtaking. It's a must-see when visiting London!\" - Sarah B.\n2. \"Exploring the historic streets of Edinburgh was like stepping into a storybook.\" - James H.\n3. \"Visiting Stonehenge was a surreal experience. So much mystery and wonder!\" - Emily G."
+            ]
+        },
+        {
+            "tag": "CustomerExperiences/France",
+            "patterns": [
+                "Customer experiences in France",
+                "Travel stories about France",
+                "Share experiences in France"
+            ],
+            "responses": [
+                "Explore customer experiences in France on these platforms:\n- [TripAdvisor](https://www.tripadvisor.com)\n- [Lonely Planet](https://www.lonelyplanet.com)\n- [Travelocity](https://www.travelocity.com) \nTestimonials:\n1. \"The Eiffel Tower at night is truly magical. It's a symbol of romance and beauty.\" - Sophie L.\n2. \"Exploring the streets of Paris and stumbling upon quaint cafes was the highlight of my trip.\" - Thomas M.\n3. \"The beauty of the French Riviera is unmatched. Cannes and Nice are must-visit destinations!\" - Emma R."
+            ]
+        },
+        {
+            "tag": "CustomerExperiences/India",
+            "patterns": [
+                "Customer experiences in India",
+                "Travel stories about India",
+                "Share experiences in India"
+            ],
+            "responses": [
+                "Discover customer experiences in India on these platforms:\n- [TripAdvisor](https://www.tripadvisor.com)\n- [Lonely Planet](https://www.lonelyplanet.com)\n- [Travelocity](https://www.travelocity.com) \nTestimonials:\n1. \"Visiting the Taj Mahal was a dream come true! The architecture is breathtaking.\" - John D.\n2. \"Exploring Goa's beaches was the highlight of my trip. Such a vibrant atmosphere!\" - Emily S.\n3. \"I highly recommend trying the street food in Delhi. It's a culinary adventure!\" - Alex P."
+            ]
+        },
+        {
+            "tag": "CustomerExperiences/Usa",
+            "patterns": [
+                "Customer experiences in Usa",
+                "Travel stories about Usa",
+                "Share experiences in Usa"
+            ],
+            "responses": [
+                "Explore customer experiences in the Usa through these platforms:\n- [TripAdvisor](https://www.tripadvisor.com)\n- [Lonely Planet](https://www.lonelyplanet.com)\n- [Travelocity](https://www.travelocity.com) \nTestimonials:\n1. \"The Grand Canyon left me speechless. A must-visit for anyone traveling to the Usa!\" - Sarah L.\n2. \"Disneyland was magical! It brought out the kid in me.\" - Michael R.\n3. \"New York City's skyline is mesmerizing, especially from the top of the Empire State Building.\" - Laura M."
+            ]
+        },
+        {
+            "tag": "CustomerExperiences/Canada",
+            "patterns": [
+                "Customer experiences in Canada",
+                "Travel stories about Canada",
+                "Share experiences in Canada"
+            ],
+            "responses": [
+                "Check out customer experiences in Canada on these platforms:\n- [TripAdvisor](https://www.tripadvisor.com)\n- [Lonely Planet](https://www.lonelyplanet.com)\n- [Travelocity](https://www.travelocity.com) \nTestimonials:\n1. \"Banff National Park is a paradise for nature lovers. The scenery is simply stunning!\" - Mark T.\n2. \"Toronto's CN Tower offers breathtaking views of the city. Don't miss it!\" - Jessica K.\n3. \"Exploring Old Quebec felt like stepping back in time. So much history and charm!\" - David W."
+            ]
+        },{
+            "tag": "LocalTransportation/Uk",
+            "patterns": [
+                "Local transportation in Uk",
+                "Transportation options in Uk",
+                "Getting around in Uk"
+            ],
+            "responses": [
+                "In the Uk, you have several transportation options:\n- Public Transit: The London Underground (Tube) is a convenient way to navigate London. Buses and trains are also available throughout the country.\n- Taxi Services: Look for licensed black cabs in major cities like London, or consider using ride-hailing apps like Uber or Lyft.\n- Car Rental: If you prefer to drive, many car rental companies operate in the Uk. Just remember to drive on the left side of the road!"
+            ]
+        },
+        {
+            "tag": "LocalTransportation/France",
+            "patterns": [
+                "Local transportation in France",
+                "Transportation options in France",
+                "Getting around in France"
+            ],
+            "responses": [
+                "When traveling in France, you can choose from various transportation modes:\n- Public Transit: Paris has an extensive metro and bus system, while other cities offer buses and trams. Consider purchasing a rechargeable Navigo card for convenience.\n- Taxi Services: Taxis are readily available in major cities and can be hailed on the street or booked in advance.\n- Car Rental: Renting a car allows for flexibility in exploring rural areas and scenic routes. Many rental agencies operate in France."
+            ]
+        },
+        {
+            "tag": "LocalTransportation/India",
+            "patterns": [
+                "Local transportation in India",
+                "Transportation options in India",
+                "Getting around in India"
+            ],
+            "responses": [
+                "In India, you have several transportation choices:\n- Public Transit: Major cities like Delhi, Mumbai, and Kolkata have extensive metro systems, while buses and auto-rickshaws are common modes of transport. Trains are also a popular way to travel between cities.\n- Taxi Services: Taxis are widely available in urban areas, and app-based services like Ola and Uber operate in many cities.\n- Car Rental: Renting a car with a driver is a convenient option for exploring India's diverse regions. Many car rental agencies offer chauffeur-driven vehicles."
+            ]
+        },
+        {
+            "tag": "LocalTransportation/Usa",
+            "patterns": [
+                "Local transportation in Usa",
+                "Transportation options in Usa",
+                "Getting around in Usa"
+            ],
+            "responses": [
+                "When visiting the Usa, you'll find various transportation options:\n- Public Transit: Major cities have subway systems, buses, and light rail networks. New York City's subway and Chicago's 'L' train are iconic modes of transport.\n- Taxi Services: Taxis are available in urban areas, and ride-hailing services like Uber and Lyft operate nationwide.\n- Car Rental: Renting a car is a popular choice for exploring scenic routes and national parks. Many car rental companies offer vehicles at airports and downtown locations."
+            ]
+        },
+        {
+            "tag": "LocalTransportation/Canada",
+            "patterns": [
+                "Local transportation in Canada",
+                "Transportation options in Canada",
+                "Getting around in Canada"
+            ],
+            "responses": [
+                "In Canada, you have several transportation options to choose from:\n- Public Transit: Major cities like Toronto, Montreal, and Vancouver have extensive subway, bus, and streetcar systems. Purchase a reloadable transit card for convenience.\n- Taxi Services: Taxis are available in urban areas and can be hailed on the street or booked through apps.\n- Car Rental: Renting a car is ideal for exploring Canada's vast landscapes. Many car rental companies offer vehicles at airports and city locations."
+            ]
+        },
+        {
+            "tag": "EmergencyNumbers/India",
+            "patterns": [
+                "Emergency numbers in India",
+                "India emergency contact",
+                "Urgent help in India",
+                "Emergency services in India",
+                "Contact emergency in India"
+            ],
+            "responses": [
+                "Here are the emergency numbers for India:\n- Police: 100\n- Ambulance: 102\n- Fire: 101\n- Disaster Management: 108\n- Women's Helpline: 1091\n- Child Helpline: 1098"
+            ]
+        },
+        {
+            "tag": "EmergencyNumbers/Usa",
+            "patterns": [
+                "Emergency numbers in Usa",
+                "Usa emergency contact",
+                "Urgent help in Usa",
+                "Emergency services in Usa",
+                "Contact emergency in Usa"
+            ],
+            "responses": [
+                "Here are the emergency numbers for the Usa:\n- Emergency: 911"
+            ]
+        },
+        {
+            "tag": "EmergencyNumbers/Canada",
+            "patterns": [
+                "Emergency numbers in Canada",
+                "Canada emergency contact",
+                "Urgent help in Canada",
+                "Emergency services in Canada",
+                "Contact emergency in Canada"
+            ],
+            "responses": [
+                "Here are the emergency numbers for Canada:\n- Emergency: 911"
+            ]
+        },
+        {
+            "tag": "EmergencyNumbers/Uk",
+            "patterns": [
+                "Emergency numbers in Uk",
+                "Uk emergency contact",
+                "Urgent help in Uk",
+                "Emergency services in Uk",
+                "Contact emergency in Uk"
+            ],
+            "responses": [
+                "Here are the emergency numbers for the Uk:\n- Emergency: 999 or 112"
+            ]
+        },
+        {
+            "tag": "EmergencyNumbers/France",
+            "patterns": [
+                "Emergency numbers in France",
+                "France emergency contact",
+                "Urgent help in France",
+                "Emergency services in France",
+                "Contact emergency in France"
+            ],
+            "responses": [
+                "Here are the emergency numbers for France:\n- Police: 17\n- Ambulance: 15\n- Fire: 18\n- European Emergency: 112"
+            ]
+        },{
+            "tag": "Currency/India",
+            "patterns": [
+                "Currency in India",
+                "Indian currency",
+                "What is the currency of India?",
+                "INR"
+            ],
+            "responses": [
+                "The currency of India is the Indian Rupee (INR)."
+            ]
+        },
+        {
+            "tag": "Currency/Usa",
+            "patterns": [
+                "Currency in Usa",
+                "United States currency",
+                "What is the currency of the Usa?",
+                "USD"
+            ],
+            "responses": [
+                "The currency of the Usa is the United States Dollar (USD)."
+            ]
+        },
+        {
+            "tag": "Currency/Canada",
+            "patterns": [
+                "Currency in Canada",
+                "Canadian currency",
+                "What is the currency of Canada?",
+                "CAD"
+            ],
+            "responses": [
+                "The currency of Canada is the Canadian Dollar (CAD)."
+            ]
+        },
+        {
+            "tag": "Currency/Uk",
+            "patterns": [
+                "Currency in Uk",
+                "British currency",
+                "What is the currency of the Uk?",
+                "GBP"
+            ],
+            "responses": [
+                "The currency of the Uk is the British Pound Sterling (GBP)."
+            ]
+        },
+        {
+            "tag": "Currency/France",
+            "patterns": [
+                "Currency in France",
+                "Euro currency",
+                "What is the currency of France?",
+                "EUR"
+            ],
+            "responses": [
+                "The currency of France is the Euro (EUR)."
+            ]
+        }
+                    
+    ]
+}
