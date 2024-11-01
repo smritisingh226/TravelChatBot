@@ -379,7 +379,7 @@ def get_currency(country_name):
 
 
 # Telegram bot token
-BOT_TOKEN = "6764597929:AAGxe5Ia_bOh22zIImcQ2oSUr0GFIm2tA4Q"
+BOT_TOKEN = "YOUR TOKEN HERE IN"
 
 # Initialize the bot
 bot = telebot.TeleBot(BOT_TOKEN)
